@@ -46,7 +46,7 @@ public class MyGame1 extends JFrame  {
     	 makeStartButton();
     	 add(BorderLayout.EAST, buttonBar);
     	 add(BorderLayout.CENTER, ac);
-    	 setTitle("My rough game (Alin edition)");
+    	 setTitle("My rough game");
     	 setSize(500, 400);
     	 setLocationRelativeTo(null);
     	 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,7 +98,7 @@ public class MyGame1 extends JFrame  {
     	 @Override                                         //inner class
     	 public void actionPerformed(ActionEvent event)  {
     		 for(int i = 0; i < 8; i ++)  {
-    			 if(event.getSource() == buttons[i])  {
+    			 if(event.getSource() == buttons[i])  {    //determines which button was pressed
     				 startButton.setBackground(colors[i]);
     				 startButton.setForeground(Color.white);
     				 chosenColor = colors[i];
@@ -115,11 +115,11 @@ public class MyGame1 extends JFrame  {
     		if(timer.isRunning())  {
     			 isSlowing = true;  //timer.stop();
     			 startButton.setFont(new Font("Purisa", Font.BOLD, 20));
-    			 startButton.setText("Start" + angle);
+    			 startButton.setText("Start");
     			 if(angle > 205 && angle < 250)  {      //if angle is right 205 - 250
     				 Font bigFont = new Font("Purisa", Font.PLAIN, 30);
     				 startButton.setFont(bigFont);
-    				 startButton.setText("Masha win!");
+    				 startButton.setText("You win!");
     				 makeFlash(1);
     			 }
     		 } else {
